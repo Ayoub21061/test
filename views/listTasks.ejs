@@ -1,0 +1,10 @@
+<h1>Todo list</h1>
+<ul>
+  <% for(task of tasks) { %>
+    <li><%= task.taskName %> - <a href="/delete/<%= task.idtasks %>">Delete</a></li>
+  <% } %>
+</ul>
+<form action="/add" method="POST">
+  <input name="task" />
+  <input type="submit" />
+</form>
